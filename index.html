@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>MAGNUS Despachantes de Aduana - Inicio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col relative overflow-x-hidden"
+  >
+    <header class="bg-white w-full shadow-sm z-50 sticky top-0">
+      <div
+        class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 z-50 transition-transform hover:scale-105 shrink-0"
+        >
+          <img
+            src="assets/img/logo_magnus.png"
+            alt="MAGNUS Logo"
+            class="h-20 md:h-30 w-auto object-contain"
+          />
+        </a>
+
+        <nav class="hidden lg:flex gap-8 items-center">
+          <a
+            href="index.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Inicio</a
+          >
+          <a
+            href="about.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Nosotros</a
+          >
+          <a
+            href="services.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Servicios</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Contacto</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Avanza</a
+          >
+        </nav>
+
+        <div class="hidden lg:flex gap-3 items-center">
+          <a
+            href="https://www.facebook.com/tupagina"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#1877F2] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@tuusuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#000000] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a
+            href="https://wa.me/59100000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#25D366] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-[#0d235c] text-3xl focus:outline-none z-50"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg flex-col border-t border-gray-100 z-40"
+      >
+        <a
+          href="index.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Inicio</a
+        >
+        <a
+          href="about.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Nosotros</a
+        >
+        <a
+          href="services.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Servicios</a
+        >
+        <a
+          href="contact.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Contacto</a
+        >
+
+        <div class="px-8 py-6 flex gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-[#1877F2] text-white rounded-lg text-lg"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-black text-white rounded-lg text-lg"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-[#25D366] text-white rounded-lg text-lg"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="hero-carousel"
+      class="relative flex-grow min-h-[90vh] w-full overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <div
+          class="carousel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100 flex items-center justify-center"
+          style="background-image: url(&quot;assets/img/carrusel_1.png&quot;)"
+        >
+          <div class="absolute inset-0 bg-black/40 z-0"></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-7xl"
+          >
+            <h1
+              class="text-white text-4xl sm:text-5xl md:text-[5.5rem] font-bold leading-[1.1] mb-6 md:mb-10 drop-shadow-lg"
+            >
+              La mejor agencia<br />despachante de<br />aduana
+            </h1>
+            <div
+              class="bg-[#facc15] w-full max-w-[800px] py-3 md:py-4 rounded-xl mb-8 md:mb-12 shadow-lg px-2"
+            >
+              <p
+                class="text-[#0d235c] text-xl md:text-3xl font-black italic tracking-wide"
+              >
+                Nosotros nos esforzamos más
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto"
+            >
+              <a
+                href="contact.html"
+                class="w-full sm:w-auto bg-white text-[#0d235c] font-bold text-base md:text-lg px-8 py-3 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300"
+                >CONTÁCTANOS 24/7</a
+              >
+              <a
+                href="#"
+                class="info-button w-full sm:w-auto text-white border-2 border-white font-semibold text-base md:text-lg px-6 py-3 rounded-lg hover:bg-white hover:text-[#0d235c] transition duration-300 flex items-center justify-center gap-2"
+                data-info="Detalles de contenedores."
+                ><i class="fas fa-info-circle"></i> Ver Info</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="carousel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 flex items-center justify-center"
+          style="background-image: url(&quot;assets/img/carrusel_2.png&quot;)"
+        >
+          <div class="absolute inset-0 bg-black/40 z-0"></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-7xl"
+          >
+            <h1
+              class="text-white text-4xl sm:text-5xl md:text-[5.5rem] font-bold leading-[1.1] mb-6 md:mb-10 drop-shadow-lg"
+            >
+              Importaciones<br />rápidas y<br />seguras
+            </h1>
+            <div
+              class="bg-[#facc15] w-full max-w-[800px] py-3 md:py-4 rounded-xl mb-8 md:mb-12 shadow-lg px-2"
+            >
+              <p
+                class="text-[#0d235c] text-xl md:text-3xl font-black italic tracking-wide"
+              >
+                Tu carga en las mejores manos
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto"
+            >
+              <a
+                href="services.html"
+                class="w-full sm:w-auto bg-white text-[#0d235c] font-bold text-base md:text-lg px-8 py-3 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300"
+                >NUESTROS SERVICIOS</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="carousel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 flex items-center justify-center"
+          style="background-image: url(&quot;assets/img/carrusel_3.png&quot;)"
+        >
+          <div class="absolute inset-0 bg-black/40 z-0"></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-7xl"
+          >
+            <h1
+              class="text-white text-4xl sm:text-5xl md:text-[5.5rem] font-bold leading-[1.1] mb-6 md:mb-10 drop-shadow-lg"
+            >
+              Asesoría legal<br />aduanera<br />especializada
+            </h1>
+            <div
+              class="bg-[#facc15] w-full max-w-[800px] py-3 md:py-4 rounded-xl mb-8 md:mb-12 shadow-lg px-2"
+            >
+              <p
+                class="text-[#0d235c] text-xl md:text-3xl font-black italic tracking-wide"
+              >
+                Evita contratiempos en la aduana
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto"
+            >
+              <a
+                href="contact.html"
+                class="w-full sm:w-auto bg-white text-[#0d235c] font-bold text-base md:text-lg px-8 py-3 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300"
+                >HABLA CON UN EXPERTO</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="prevSlide"
+        class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 text-white/70 text-3xl md:text-4xl hover:text-[#facc15] transition"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        id="nextSlide"
+        class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 text-white/70 text-3xl md:text-4xl hover:text-[#facc15] transition"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div
+        id="carousel-dots"
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3"
+      ></div>
+    </section>
+    <!--main-->
+    <main class="w-full bg-white py-12 md:py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2
+          class="text-[#0d235c] text-3xl md:text-4xl font-extrabold leading-tight mb-5 drop-shadow-sm"
+        >
+          Bienvenido a la agencia que más se esfuerza
+        </h2>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-16"
+        >
+          <div class="w-full md:w-1/2 flex flex-col items-start text-left">
+            <div
+              class="text-gray-600 font-medium text-sm md:text-base text-justify leading-relaxed space-y-4 mb-8 pr-0 md:pr-4"
+            >
+              <p>
+                Somos una Agencia Despachante de Aduana comprometida con la
+                eficiencia, la transparencia y un esfuerzo constante que nos
+                diferencia. Sabemos que no somos los más grandes, pero sí los
+                que más nos dedicamos a cada cliente, a cada trámite.
+              </p>
+              <p>
+                Acompañamos a nuestros socios en todas las etapas del proceso de
+                importación y exportación: desde la planificación logística y
+                gestión documental, hasta el cumplimiento normativo y la
+                representación ante Aduana.
+              </p>
+            </div>
+
+            <a
+              href="about.html"
+              class="bg-[#e2e4e8] text-[#0d235c] font-bold text-xs md:text-sm tracking-wider px-8 py-3 rounded hover:bg-[#facc15] hover:text-white hover:shadow-md transition-all duration-300"
+            >
+              CONÓCENOS
+            </a>
+          </div>
+
+          <div class="w-full md:w-1/2 flex justify-center items-center">
+            <img
+              src="assets/img/grafico_bienvenida.png"
+              alt="Gráfico de servicios logísticos"
+              class="w-full max-w-[350px] lg:max-w-[450px] object-contain hover:scale-105 transition-transform duration-500 rounded-lg"
+              style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1)"
+            />
+          </div>
+        </div>
+        <hr class="border-t border-gray-300 my-8" />
+        <br /><br />
+      </div>
+      <!-- carrusel de servicios -->
+      <section
+        class="w-full bg-[#0d235c] relative overflow-hidden min-h-screen flex flex-col justify-center py-8"
+      >
+        <h2
+          class="text-white text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12 tracking-wide drop-shadow-lg"
+        >
+          ¡Hacemos Todo!
+        </h2>
+
+        <div
+          class="relative w-full max-w-7xl mx-auto flex items-center justify-center min-h-[350px] md:min-h-[450px]"
+        >
+          <button
+            id="prev-service"
+            class="absolute left-2 md:left-8 z-50 text-[#facc15] text-4xl md:text-5xl hover:scale-110 hover:text-white transition-all duration-300"
+          >
+            <i class="fas fa-angle-double-left"></i>
+          </button>
+
+          <div
+            class="perspective-container relative w-full h-full flex justify-center items-center"
+          >
+            <div
+              class="service-card prev-card-2 absolute w-52 md:w-80 h-[18rem] md:h-[26rem] bg-white rounded-xl overflow-hidden shadow-2xl cursor-pointer"
+            >
+              <img
+                src="assets/img/servicio_3.png"
+                alt="Transporte Internacional"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10/12 bg-white/95 backdrop-blur-sm py-3 px-4 rounded-2xl text-center shadow-lg"
+              >
+                <h3
+                  class="text-[#0d235c] font-bold text-xs md:text-lg leading-tight"
+                >
+                  Despachos <br />Aduaneros
+                </h3>
+              </div>
+            </div>
+
+            <div
+              class="service-card prev-card absolute w-60 md:w-80 h-[20rem] md:h-[26rem] bg-[#facc15] rounded-xl p-3 shadow-2xl cursor-pointer"
+            >
+              <div
+                class="bg-white w-full h-full rounded-lg flex flex-col items-center justify-center p-6 gap-6"
+              >
+                <img
+                  src="assets/img/logo_magnus.png"
+                  alt="Magnus Logo"
+                  class="w-32 object-contain"
+                />
+                <div
+                  class="bg-[#fef08a] w-full py-3 rounded-lg text-center shadow-inner"
+                >
+                  <h3
+                    class="text-[#0d235c] font-black text-sm md:text-base leading-tight"
+                  >
+                    Gestión de APs <br />
+                    y Certificados
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="service-card active-card absolute w-60 md:w-80 h-[20rem] md:h-[26rem] bg-white rounded-xl overflow-hidden shadow-2xl cursor-pointer"
+            >
+              <img
+                src="assets/img/servicio_1.jpg"
+                alt="Despachos Aduaneros"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10/12 bg-white/95 backdrop-blur-sm py-3 px-4 rounded-2xl text-center shadow-lg"
+              >
+                <h3
+                  class="text-[#0d235c] font-bold text-sm md:text-lg leading-tight"
+                >
+                  Transporte y <br />
+                  Gestión Logistica
+                </h3>
+              </div>
+            </div>
+
+            <div
+              class="service-card next-card absolute w-60 md:w-80 h-[20rem] md:h-[26rem] bg-white rounded-xl overflow-hidden shadow-2xl cursor-pointer"
+            >
+              <img
+                src="assets/img/servicio_2.webp"
+                alt="Asesoramiento en Comex"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10/12 bg-white/95 backdrop-blur-sm py-3 px-4 rounded-2xl text-center shadow-lg"
+              >
+                <h3
+                  class="text-[#0d235c] font-bold text-sm md:text-lg leading-tight"
+                >
+                  Asesoramiento<br />en Comex
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="next-service"
+            class="absolute right-2 md:right-8 z-50 text-[#facc15] text-4xl md:text-5xl hover:scale-110 hover:text-white transition-all duration-300"
+          >
+            <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
+
+        <div class="flex justify-center mt-8 md:mt-12 relative z-50">
+          <a
+            href="services.html"
+            class="bg-[#e2e4e8] text-[#0d235c] font-bold text-sm tracking-wider px-8 py-3 rounded hover:bg-[#facc15] hover:text-white hover:shadow-md transition-all duration-300"
+          >
+            DESCUBRE MÁS
+          </a>
+        </div>
+      </section>
+      <!-- FIN CARRUSEL DE SERVICIOS 
+      /direfentes-->
+      <section class="w-full bg-white py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-12 md:mb-20">
+            <h2
+              class="text-3xl md:text-[2.75rem] font-extrabold text-[#0d235c] tracking-tight"
+            >
+              ¿Qué nos hace <span class="text-[#facc15]">DIFERENTES?</span>
+            </h2>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+            <div
+              class="w-full md:w-1/2 border-l-[8px] border-[#0d235c] pl-6 md:pl-8 py-2"
+            >
+              <div
+                class="bg-[#0d235c] text-[#facc15] font-black text-base md:text-lg px-6 py-3 rounded-md mb-6 inline-block tracking-wide shadow-md"
+              >
+                1. NOSOTROS NOS ESFORZAMOS MÁS
+              </div>
+
+              <p
+                class="text-gray-500 font-medium text-sm md:text-base text-justify leading-relaxed"
+              >
+                Sabemos que no somos la agencia más grande, y en MAGNUS lo
+                asumimos con orgullo. Eso nos obliga a esforzarnos más: en los
+                detalles, el seguimiento y la atención para ganarnos la
+                confianza de cada cliente. No vivimos de la trayectoria, vivimos
+                del compromiso. Y ese gran esfuerzo, es nuestro sello.
+              </p>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+              <img
+                src="assets/img/Nuestro_esfuerzo.png"
+                alt="Nuestro esfuerzo"
+                class="w-full max-w-[350px] lg:max-w-[450px] object-contain hover:-translate-y-2 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- iso -->
+      <section class="w-full bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+          <div
+            class="flex flex-col md:flex-row-reverse items-center gap-10 lg:gap-16"
+          >
+            <div
+              class="w-full md:w-1/2 border-r-[8px] border-[#facc15] pr-6 md:pr-8 py-2 text-right"
+            >
+              <div
+                class="bg-[#facc15] text-[#0d235c] font-black text-base md:text-lg px-6 py-3 rounded-md mb-6 inline-block tracking-wide shadow-md uppercase"
+              >
+                2. RUMBO AL «OEA» E «ISO 9001»
+              </div>
+
+              <div
+                class="text-gray-500 font-medium text-sm md:text-base text-justify leading-relaxed space-y-4"
+              >
+                <p>
+                  En MAGNUS trabajamos día a día elevando nuestros estándares de
+                  calidad y seguridad. Hemos implementado procesos rigurosos que
+                  aseguren la excelencia en cada operación con el objetivo claro
+                  de obtener en un futuro cercano la certificación como Operador
+                  Económico Autorizado (OEA) ante la Aduana Nacional de Bolivia.
+                  Así como también la certificación ISO 9001.
+                </p>
+                <p>
+                  Estas certificaciones representan un objetivo que nos impulsa
+                  a mantener y adoptar altos estándares de calidad, seguridad y
+                  confiabilidad en todos nuestros procesos.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+              <img
+                src="assets/img/logo_iso.png"
+                alt="Certificación ISO"
+                class="w-full max-w-[300px] md:max-w-[380px] object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full bg-white py-12 pb-24">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+          <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+            <div
+              class="w-full md:w-1/2 border-l-[8px] border-[#0d235c] pl-6 md:pl-8 py-2"
+            >
+              <div
+                class="bg-[#0d235c] text-[#facc15] font-black text-base md:text-lg px-6 py-3 rounded-md mb-6 inline-block tracking-wide shadow-md uppercase"
+              >
+                3. MAGNUS ES «INNOVACIÓN»
+              </div>
+
+              <div
+                class="text-gray-500 font-medium text-sm md:text-base text-justify leading-relaxed space-y-4"
+              >
+                <p>
+                  Apostamos por la tecnología para agilizar y dar claridad a
+                  cada proceso. Con el software GESDES automatizamos el llenado
+                  de declaraciones, acelerando los tiempos y reduciendo el
+                  riesgo de errores.
+                </p>
+                <p>
+                  Con nuestro sistema AVANZA, nuestros clientes hacen
+                  seguimiento en tiempo real a todo el despacho: desde el inicio
+                  del trámite, hasta la extracción final de la mercancía en
+                  Aduana.
+                </p>
+                <p>Más control, menos errores y un servicio mucho más ágil.</p>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+              <img
+                src="assets/img/grafico_innovacion.png"
+                alt="Innovación Tecnológica"
+                class="w-full max-w-[300px] md:max-w-[400px] object-contain hover:rotate-3 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="relative w-full h-[550px] md:h-[700px] flex items-center justify-center overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center z-0"
+          style="background-image: url(&quot;assets/img/hunday.png&quot;)"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#0d235c] via-[#0d235c]/60 to-transparent"
+          ></div>
+
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <div class="relative z-20 text-center px-6 max-w-6xl">
+          <h2
+            class="text-white text-4xl md:text-6xl font-black mb-12 leading-tight drop-shadow-xl uppercase tracking-tight"
+          >
+            Contáctanos y descubre cómo<br />nos esforzamos más
+          </h2>
+
+          <a
+            href="contact.html"
+            class="inline-block border-2 border-[#facc15] text-[#facc15] font-black uppercase tracking-widest px-12 py-4 rounded-md hover:bg-[#facc15] hover:text-[#0d235c] transition-all duration-300 shadow-2xl bg-[#0d235c]/40 text-lg"
+          >
+            Cotice Ahora
+          </a>
+        </div>
+      </section>
+    </main>
+    <article class="w-full bg-white py-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center"
+        >
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Dirección
+            </h4>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Avenida Arce, Torre Ejecutiva<br />
+              Real Plaza, Piso 8 - Oficina 821<br />
+              La Paz, Bolivia
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Teléfono
+            </h4>
+            <p class="text-gray-500 text-sm">77762840</p>
+            <p class="text-gray-500 text-sm">69785798</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Correo
+            </h4>
+            <p class="text-gray-500 text-sm">yhoel.limachi@magnus.com.bo</p>
+            <p class="text-gray-500 text-sm text-xs">
+              alejandro.paucara@magnus.com
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              RRSS
+            </h4>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-2xl hover:text-[#1877F2] transition-colors text-gray-400"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-2xl hover:text-[#000000] transition-colors text-gray-400"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                class="text-2xl hover:text-[#25D366] transition-colors text-gray-400"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer class="w-full bg-[#061E64] text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12 border-t border-white/10 pt-12"
+        >
+          <div class="flex flex-col items-center lg:items-start">
+            <img
+              src="assets/img/logoMagunus_2.png"
+              alt="MAGNUS Logo"
+              class="h-32 md:h-40 mb-4 object-contain"
+            />
+            <p class="text-[#facc15] font-black italic text-xl mb-6">
+              Nos esforzamos más
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <ul
+              class="text-gray-300 text-sm space-y-2 text-center lg:text-left"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="w-full lg:max-w-2xl h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10"
+          >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.3459516135065!2d-68.12760706890525!3d-16.506710207045227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21aae693689d%3A0x6b465fcb4f6217f1!2sMagnus%20-%20Agencia%20Despachante%20de%20Aduana!5e0!3m2!1ses-419!2sbo!4v1773882922520!5m2!1ses-419!2sbo" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 pt-8 border-t border-white/10 text-gray-400 text-[10px] tracking-[3px] uppercase"
+        >
+          <p>© 2026 MAGNUS S.R.L. - Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wha"
+      id="btn-whatsapp-flotante"
+      class="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-[#20BA56] hover:scale-110 transition-all duration-500 opacity-0 pointer-events-none translate-y-8"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Escríbenos por WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

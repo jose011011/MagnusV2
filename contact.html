@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios - MAGNUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-white w-full shadow-sm z-50 sticky top-0">
+      <div
+        class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 z-50 transition-transform hover:scale-105 shrink-0"
+        >
+          <img
+            src="assets/img/logo_magnus.png"
+            alt="MAGNUS Logo"
+            class="h-20 md:h-30 w-auto object-contain"
+          />
+        </a>
+
+        <nav class="hidden lg:flex gap-8 items-center">
+          <a
+            href="index.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Inicio</a
+          >
+          <a
+            href="about.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Nosotros</a
+          >
+          <a
+            href="services.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Servicios</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Contacto</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#0d235c] font-bold text-sm hover:text-yellow-600 transition uppercase tracking-wider"
+            >Avanza</a
+          >
+        </nav>
+
+        <div class="hidden lg:flex gap-3 items-center">
+          <a
+            href="https://www.facebook.com/tupagina"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#1877F2] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@tuusuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#000000] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a
+            href="https://wa.me/59100000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-9 h-9 flex items-center justify-center bg-[#25D366] text-white rounded-lg text-base shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-[#0d235c] text-3xl focus:outline-none z-50"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg flex-col border-t border-gray-100 z-40"
+      >
+        <a
+          href="index.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Inicio</a
+        >
+        <a
+          href="about.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Nosotros</a
+        >
+        <a
+          href="services.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Servicios</a
+        >
+        <a
+          href="contact.html"
+          class="px-8 py-4 text-[#0d235c] font-bold border-b hover:bg-gray-50 uppercase text-xs tracking-widest"
+          >Contacto</a
+        >
+
+        <div class="px-8 py-6 flex gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-[#1877F2] text-white rounded-lg text-lg"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-black text-white rounded-lg text-lg"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center bg-[#25D366] text-white rounded-lg text-lg"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    <section
+      class="relative w-full h-[450px] md:h-[550px] flex items-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="background-image: url(&quot;assets/img/hero-contacto.png&quot;)"
+      >
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-20 w-full">
+        <div class="max-w-xl space-y-4">
+          <h1
+            class="text-white text-3xl md:text-5xl font-black leading-tight drop-shadow-md"
+          >
+            Escríbenos...<br />
+            Siempre respondemos
+          </h1>
+
+          <p class="text-[#facc15] font-bold italic text-sm md:text-base">
+            En <span class="uppercase">Magnus</span> queremos ayudarte a
+            expandir tu negocio con seguridad
+          </p>
+
+          <div class="pt-10">
+            <a
+              href="#contact-info"
+              class="inline-block bg-white text-[#0d235c] px-6 py-2 rounded-md font-black uppercase tracking-tighter text-lg shadow-lg hover:bg-gray-100 transition-all"
+            >
+              CONTÁCTANOS
+            </a>
+
+            <p
+              class="text-[#facc15] text-xs mt-3 font-bold italic tracking-wide"
+            >
+              Te responderemos inmediatamente
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br id="contact-info" />
+    <main class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div class="space-y-12" id="contact-info">
+          <h2
+            class="text-[#0d235c] text-4xl font-black border-b-4 border-[#facc15] inline-block pb-2"
+          >
+            Nuestra Dirección
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex items-start gap-5">
+              <div class="text-[#0d235c] text-2xl mt-1">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="text-gray-600 font-medium">
+                Avenida Arce, Nº 2177, Torre Ejecutiva Real Plaza,<br />Piso 8,
+                Oficina 821. La Paz, Bolivia
+              </p>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="text-[#0d235c] text-2xl mt-1">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <p class="text-gray-600 font-medium">
+                77762840 <br />
+                69785498
+              </p>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="text-[#0d235c] text-2xl mt-1">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <p class="text-gray-600 font-medium text-sm md:text-base">
+                yhoel.limachi@magnus.com.bo <br />
+                alejandro.paucara@magnus.com.bo
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-50 p-6 rounded-xl border-l-4 border-[#0d235c] space-y-4"
+            >
+              <div
+                class="flex items-center gap-3 text-[#0d235c] font-black uppercase tracking-tighter"
+              >
+                <i class="fas fa-clock"></i>
+                <h4>Horario Trabajo Continuo</h4>
+              </div>
+              <ul class="text-sm text-gray-500 space-y-1 ml-8 list-disc">
+                <li>Lunes - Viernes: 08:30 - 18:00</li>
+                <li>Sábado: 08:30 a 12:30</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white p-8 md:p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100"
+        >
+          <h2 class="text-[#0d235c] text-4xl font-black mb-8">Hablemos</h2>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-bold text-[#0d235c] uppercase"
+                  >Nombre Completo *</label
+                >
+                <input
+                  type="text"
+                  name="user_name"
+                  id="user_name"
+                  required
+                  class="bg-gray-50 border border-gray-200 p-3 rounded-lg focus:border-[#0d235c] outline-none transition-all"
+                  placeholder="Ej. Juan Pérez"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-bold text-[#0d235c] uppercase"
+                  >Tu Correo *</label
+                >
+                <input
+                  type="email"
+                  name="user_email"
+                  id="user_email"
+                  required
+                  class="bg-gray-50 border border-gray-200 p-3 rounded-lg focus:border-[#0d235c] outline-none transition-all"
+                  placeholder="ejemplo@correo.com"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-bold text-[#0d235c] uppercase"
+                >Servicio Requerido</label
+              >
+              <select
+                name="service_type"
+                id="service_type"
+                class="bg-gray-50 border border-gray-200 p-3 rounded-lg focus:border-[#0d235c] outline-none cursor-pointer"
+              >
+                <option value="Despacho Aduanero">Despacho Aduanero</option>
+                <option value="Asesoramiento Comex">Asesoramiento Comex</option>
+                <option value="Gestión Logística">
+                  Transporte y Logística
+                </option>
+                <option value="Otros">Otros Servicios / Consultas</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-bold text-[#0d235c] uppercase"
+                >Mensaje *</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                required
+                rows="4"
+                class="bg-gray-50 border border-gray-200 p-3 rounded-lg focus:border-[#0d235c] outline-none transition-all"
+                placeholder="Cuéntanos más sobre tu requerimiento..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="submit-btn"
+              class="w-full bg-[#0d235c] text-white font-black py-4 rounded-lg uppercase tracking-widest hover:bg-blue-900 transition-all shadow-lg transform hover:-translate-y-1"
+            >
+              Enviar Mensaje
+            </button>
+
+            <p id="form-status" class="hidden text-center font-bold mt-4"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <section class="relative w-full py-20 md:py-28 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="
+          background-image: url(&quot;assets/img/fondo-tecnologico.png&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-6 text-center space-y-10">
+        <p
+          class="text-white text-xl md:text-3xl font-light leading-relaxed drop-shadow-lg mx-auto max-w-5xl"
+        >
+          Cuando algo importa de verdad, se nota en cada detalle. Si compartes
+          esa visión, si también crees que la excelencia se construye paso a
+          paso, entonces no estás aquí por coincidencia... <br />
+          <span class="font-bold">Estás justo donde debes estar.</span>
+        </p>
+
+        <div class="pt-6">
+          <a
+            href="https://wa.me/591XXXXXXX?text=Hola%20Magnus!%20Vengo%20desde%20la%20página%20web%20y%20me%20gustaría%20más%20información%20sobre%20sus%20servicios."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-white text-[#0d235c] px-10 py-3 rounded font-extrabold uppercase tracking-widest text-sm shadow-xl hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1"
+          >
+            CONTÁCTANOS
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <article class="w-full bg-white py-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center"
+        >
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Dirección
+            </h4>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Avenida Arce, Torre Ejecutiva<br />
+              Real Plaza, Piso 8 - Oficina 821<br />
+              La Paz, Bolivia
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Teléfono
+            </h4>
+            <p class="text-gray-500 text-sm">77762840</p>
+            <p class="text-gray-500 text-sm">69785798</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              Correo
+            </h4>
+            <p class="text-gray-500 text-sm">yhoel.limachi@magnus.com.bo</p>
+            <p class="text-gray-500 text-sm text-xs">
+              alejandro.paucara@magnus.com
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-[#facc15] text-4xl mb-4">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h4 class="font-bold mb-3 uppercase tracking-wider text-[#0d235c]">
+              RRSS
+            </h4>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-2xl hover:text-[#1877F2] transition-colors text-gray-400"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="text-2xl hover:text-[#000000] transition-colors text-gray-400"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                class="text-2xl hover:text-[#25D366] transition-colors text-gray-400"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer class="w-full bg-[#061E64] text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12 border-t border-white/10 pt-12"
+        >
+          <div class="flex flex-col items-center lg:items-start">
+            <img
+              src="assets/img/logoMagunus_2.png"
+              alt="MAGNUS Logo"
+              class="h-32 md:h-40 mb-4 object-contain"
+            />
+            <p class="text-[#facc15] font-black italic text-xl mb-6">
+              Nos esforzamos más
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <ul
+              class="text-gray-300 text-sm space-y-2 text-center lg:text-left"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-[#facc15] transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="w-full lg:max-w-2xl h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.3459516135065!2d-68.12760706890525!3d-16.506710207045227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21aae693689d%3A0x6b465fcb4f6217f1!2sMagnus%20-%20Agencia%20Despachante%20de%20Aduana!5e0!3m2!1ses-419!2sbo!4v1773882922520!5m2!1ses-419!2sbo"
+              width="800"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 pt-8 border-t border-white/10 text-gray-400 text-[10px] tracking-[3px] uppercase"
+        >
+          <p>© 2026 MAGNUS S.R.L. - Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

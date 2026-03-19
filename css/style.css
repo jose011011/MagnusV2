@@ -1,0 +1,66 @@
+/* Importar fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* --- ESTILOS PARA EL CARRUSEL 3D DE 5 SERVICIOS --- */
+.perspective-container {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.service-card {
+    transition: transform 0.6s ease-out, opacity 1s ease-out, z-index 0.6s ease-out;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast; /* Aumenta el contraste y nitidez */
+}
+
+/* Centro */
+.active-card {
+    transform: translateX(0) scale(1) translateZ(0);
+    z-index: 30;
+    opacity: 1;
+    filter: blur(0); /* Asegura que no tenga desenfoque */
+}
+
+/* Lados Cercanos */
+.prev-card {
+    transform: translateX(-55%) scale(0.85) rotateY(25deg) translateZ(-100px);
+    z-index: 20;
+    opacity: 1;
+}
+.next-card {
+    transform: translateX(55%) scale(0.85) rotateY(-25deg) translateZ(-100px);
+    z-index: 20;
+    opacity: 1;
+}
+
+/* Extremos Lejanos (Lo que se asoma) */
+.prev-card-2 {
+    transform: translateX(-100%) scale(0.7) rotateY(35deg) translateZ(-250px);
+    z-index: 10;
+    opacity: 0.8;
+}
+.next-card-2 {
+    transform: translateX(0) scale(0.7) translateZ(-200px); /* Justo detrás de la activa */
+    opacity: 0; /* La hacemos invisible hasta que se mueva a los lados */
+    z-index: 10;
+}
+
+/* Ajustes para Móviles (Ocultamos los extremos para que no se vea amontonado en pantallas chiquitas) */
+@media (max-width: 768px) {
+    .prev-card { transform: translateX(-40%) scale(0.8) rotateY(25deg) translateZ(-100px); }
+    .next-card { transform: translateX(40%) scale(0.8) rotateY(-25deg) translateZ(-100px); }
+    .prev-card-2 { transform: translateX(-60%) scale(0.6) rotateY(35deg) translateZ(-250px); opacity: 0; pointer-events: none; }
+    .next-card-2 { transform: translateX(60%) scale(0.6) rotateY(-35deg) translateZ(-250px); opacity: 0; pointer-events: none; }
+}
+/*
+section[style*="clip-path"] {
+    transition: all 0.3s ease-in-out;
+}*/
