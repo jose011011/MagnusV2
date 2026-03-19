@@ -211,3 +211,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             status.innerText = 'Error al enviar: ' + JSON.stringify(err);
         });
 });
+
+
+ AOS.init({
+    duration: 1000, // duración animación
+    once: true // solo una vez
+  });
