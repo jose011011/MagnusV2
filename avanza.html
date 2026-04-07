@@ -10,55 +10,59 @@
             theme: {
                 extend: {
                     colors: {
-                        magnusBlue: '#0A2540',      /* Azul oscuro principal */
-                        magnusLight: '#1C3A5E',     /* Azul secundario para el degradado */
-                        magnusGold: '#F5B301',      /* Amarillo/Dorado del escudo */
+                        magnusBlue: '#0A2540',
+                        magnusLight: '#1C3A5E',
+                        magnusGold: '#F5B301',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 font-sans text-gray-800 antialiased">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 md:p-8 font-sans text-gray-800 antialiased">
 
-    <div class="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-5xl overflow-hidden">
+    <div class="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-5xl overflow-hidden relative">
         
-        <div class="md:w-1/2 bg-gradient-to-br from-magnusBlue to-magnusLight p-12 text-white flex flex-col justify-between relative">
-            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-                <div class="absolute -top-20 -left-20 w-64 h-64 rounded-full border-4 border-white"></div>
-                <div class="absolute bottom-10 right-10 w-32 h-32 rounded-full border-4 border-magnusGold"></div>
+        <div class="w-full md:w-1/2 bg-gradient-to-br from-magnusBlue to-magnusLight p-8 md:p-12 text-white flex flex-col justify-center md:justify-between relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute -top-16 -left-16 w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white"></div>
+                <div class="absolute bottom-8 right-8 w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-magnusGold"></div>
             </div>
 
-            <div class="relative z-10">
-                <img src="assets/img/M-removebg-preview.png" alt="Magnus Logo" class="w-28 mb-8 drop-shadow-xl">
+            <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start">
+                <img src="assets/img/M-removebg-preview.png" alt="Magnus Logo" class="h-20 md:h-32 mb-6 drop-shadow-xl">
                 
-                <h1 class="text-4xl font-bold mb-4 leading-tight">Nos esforzamos <br><span class="text-magnusGold">más.</span></h1>
-                <p class="text-gray-300 text-lg mb-6">Accede a tu panel para un seguimiento personalizado, atención al detalle y control total de tus trámites logísticos.</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4 leading-tight">
+                    Nos esforzamos <br class="hidden md:block"><span class="text-magnusGold">más.</span>
+                </h1>
+                <p class="text-gray-300 text-sm md:text-lg hidden md:block">
+                    Accede a tu panel para un seguimiento personalizado, atención al detalle y control total de tus trámites logísticos.
+                </p>
             </div>
 
-            <div class="relative z-10 mt-8">
+            <div class="relative z-10 mt-8 hidden md:block">
                 <p class="text-sm text-gray-400">© 2026 Magnus Agencia Despachante de Aduana</p>
             </div>
         </div>
 
-        <div class="md:w-1/2 p-12 bg-white relative">
+        <div class="w-full md:w-1/2 p-8 md:p-12 bg-white flex flex-col justify-center min-h-[500px]">
             
-            <div id="login-section" class="transition-opacity duration-500 ease-in-out opacity-100 block">
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">Bienvenido de nuevo</h2>
-                <p class="text-gray-500 mb-8">Ingresa tus credenciales para acceder a tu cuenta.</p>
+            <div id="login-section" class="transition-opacity duration-300 ease-in-out opacity-100 block">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Bienvenido</h2>
+                <p class="text-gray-500 mb-6 md:mb-8 text-sm md:text-base">Ingresa tus credenciales para acceder a tu cuenta.</p>
 
                 <form onsubmit="event.preventDefault();">
-                    <div class="mb-5">
+                    <div class="mb-4 md:mb-5">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                        <input type="email" placeholder="ejemplo@correo.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                        <input type="email" placeholder="ejemplo@correo.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-1">
                             <label class="block text-sm font-medium text-gray-700">Contraseña</label>
-                            <a href="#" class="text-sm text-magnusLight hover:text-magnusGold font-medium transition-colors">¿Olvidaste tu contraseña?</a>
+                            <a href="#" class="text-xs md:text-sm text-magnusLight hover:text-magnusGold font-medium transition-colors">¿Olvidaste tu contraseña?</a>
                         </div>
-                        <input type="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                        <input type="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                     </div>
 
                     <button class="w-full bg-magnusBlue hover:bg-magnusLight text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mb-6 border border-transparent hover:border-magnusGold/50">
@@ -66,36 +70,36 @@
                     </button>
                 </form>
 
-                <p class="text-center text-gray-600">
+                <p class="text-center text-sm md:text-base text-gray-600">
                     ¿No tienes una cuenta? 
-                    <button onclick="toggleForms()" class="text-magnusBlue font-bold hover:text-magnusGold transition-colors">Regístrate aquí</button>
+                    <button onclick="toggleForms()" class="text-magnusBlue font-bold hover:text-magnusGold transition-colors focus:outline-none">Regístrate aquí</button>
                 </p>
             </div>
 
-            <div id="register-section" class="transition-opacity duration-500 ease-in-out opacity-0 hidden absolute top-12 left-12 right-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">Crea tu cuenta</h2>
-                <p class="text-gray-500 mb-8">Únete a nosotros para optimizar tus despachos.</p>
+            <div id="register-section" class="transition-opacity duration-300 ease-in-out opacity-0 hidden">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Crea tu cuenta</h2>
+                <p class="text-gray-500 mb-6 md:mb-8 text-sm md:text-base">Únete a nosotros para optimizar tus despachos.</p>
 
                 <form onsubmit="event.preventDefault();">
-                    <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                            <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                            <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
-                            <input type="text" placeholder="Razón social" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                            <input type="text" placeholder="Razón social" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                        <input type="email" placeholder="ejemplo@correo.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                        <input type="email" placeholder="ejemplo@correo.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                     </div>
                     
                     <div class="mb-6">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
-                        <input type="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all">
+                        <input type="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:border-magnusGold focus:ring-2 focus:ring-magnusGold/20 outline-none transition-all text-sm md:text-base">
                     </div>
 
                     <button class="w-full bg-magnusGold hover:bg-yellow-500 text-magnusBlue font-bold py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mb-6">
@@ -103,9 +107,9 @@
                     </button>
                 </form>
 
-                <p class="text-center text-gray-600">
+                <p class="text-center text-sm md:text-base text-gray-600">
                     ¿Ya tienes cuenta? 
-                    <button onclick="toggleForms()" class="text-magnusBlue font-bold hover:text-magnusGold transition-colors">Inicia sesión</button>
+                    <button onclick="toggleForms()" class="text-magnusBlue font-bold hover:text-magnusGold transition-colors focus:outline-none">Inicia sesión</button>
                 </p>
             </div>
 
@@ -116,31 +120,32 @@
         function toggleForms() {
             const loginSection = document.getElementById('login-section');
             const registerSection = document.getElementById('register-section');
+            
+            // Función auxiliar para animar la transición
+            const fadeOut = (element, callback) => {
+                element.classList.remove('opacity-100');
+                element.classList.add('opacity-0');
+                setTimeout(() => {
+                    element.classList.add('hidden');
+                    callback();
+                }, 300); // 300ms de desvanecimiento
+            };
 
-            if (loginSection.classList.contains('hidden')) {
-                // Mostrar Login, Ocultar Registro
-                registerSection.classList.remove('opacity-100');
-                registerSection.classList.add('opacity-0');
+            const fadeIn = (element) => {
+                element.classList.remove('hidden');
+                // Pequeño retraso para que el navegador aplique el display:block antes de animar opacidad
                 setTimeout(() => {
-                    registerSection.classList.add('hidden');
-                    loginSection.classList.remove('hidden');
-                    setTimeout(() => {
-                        loginSection.classList.remove('opacity-0');
-                        loginSection.classList.add('opacity-100');
-                    }, 50);
-                }, 300); // Espera a que termine la animación
+                    element.classList.remove('opacity-0');
+                    element.classList.add('opacity-100');
+                }, 50);
+            };
+
+            if (!loginSection.classList.contains('hidden')) {
+                // Ocultar Login -> Mostrar Registro
+                fadeOut(loginSection, () => fadeIn(registerSection));
             } else {
-                // Mostrar Registro, Ocultar Login
-                loginSection.classList.remove('opacity-100');
-                loginSection.classList.add('opacity-0');
-                setTimeout(() => {
-                    loginSection.classList.add('hidden');
-                    registerSection.classList.remove('hidden');
-                    setTimeout(() => {
-                        registerSection.classList.remove('opacity-0');
-                        registerSection.classList.add('opacity-100');
-                    }, 50);
-                }, 300);
+                // Ocultar Registro -> Mostrar Login
+                fadeOut(registerSection, () => fadeIn(loginSection));
             }
         }
     </script>
