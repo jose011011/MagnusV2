@@ -1,9 +1,67 @@
+
+/* Contenedor principal de la pantalla de carga */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+/* Reemplaza 'background-color' por 'background' para usar este degradado */
+    background: linear-gradient(135deg, #f5f7fa 0%, #d4e0eb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.6s cubic-bezier(0.8, 0, 0.2, 1), visibility 0.6s;
+}
+
+/* Estilos y animación para la imagen de Magnus */
+.loader-logo-spin {
+    width: 230px; /* Tamaño del logo, ajústalo si lo ves muy grande o pequeño */
+    height: auto;
+    /* Llamamos a la animación: dura 1.5s, velocidad constante, se repite infinito */
+    animation: giro3D 1.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2)); /* Sombra profesional */
+}
+
+/* Los Keyframes para el giro 3D tipo moneda */
+@keyframes giro3D {
+    0% {
+        transform: perspective(600px) rotateY(0deg) scale(1);
+    }
+    50% {
+        transform: perspective(600px) rotateY(180deg) scale(1.1); /* Crece un poquito a la mitad */
+    }
+    100% {
+        transform: perspective(600px) rotateY(360deg) scale(1);
+    }
+}
+
+.oculto {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Importar fuente Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
 
 
 /* --- ESTILOS PARA EL CARRUSEL 3D DE 5 SERVICIOS --- */

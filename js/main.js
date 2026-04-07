@@ -1,3 +1,29 @@
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Buscamos el preloader
+    const preloader = document.getElementById('magnus-pro-loader');
+
+    // Verificamos que el preloader exista para evitar errores
+    if (preloader) {
+        // A los 1.5 segundos (1500ms) se oculta obligatoriamente
+        setTimeout(() => {
+            preloader.classList.add('oculto');
+            
+            // Lo eliminamos del HTML 600ms después para que no estorbe
+            setTimeout(() => {
+                if(preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, 600);
+            
+        }, 500); // <-- Cambia este número si quieres que dure más o menos (1000 = 1 seg)
+    }
+});
+  
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // ==========================================
@@ -213,7 +239,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 });
 
 
- AOS.init({
-    duration: 1000, // duración animación
-    once: true // solo una vez
-  });
+
+
+
+
+
+
+
+
+
+
+
