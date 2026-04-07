@@ -20,7 +20,7 @@
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="Sobre Magnus Despachantes de Aduana">
   <meta property="og:description" content="Empresa especializada en servicios aduaneros en Bolivia">
-  <meta property="og:image" content="assets/img/MagnusICO.ico">
+  <meta property="og:image" content="assets/img/logoMagunus_2.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tudominio.com/about.html">
 
@@ -40,6 +40,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
   <body>
         <div id="magnus-pro-loader" class="loader-wrapper">
@@ -191,7 +192,7 @@
 
     <section class="max-w-7xl mx-auto px-6 py-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
+        <div class="space-y-6" data-aos="fade-left" data-aos-delay="200">
           <h2
             class="text-[#0d235c] text-4xl font-black uppercase border-b-4 border-[#facc15] inline-block pb-2"
           >
@@ -216,7 +217,7 @@
             </p>
           </div>
         </div>
-        <div class="relative">
+        <div class="relative" data-aos="fade-right" data-aos-delay="300">
           <img
             src="assets/img/logoMagunus_2.png"
             alt="Magnus Empresa"
@@ -243,7 +244,7 @@
       <div
         class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16"
       >
-        <div class="flex flex-col md:flex-row gap-6 items-start">
+        <div class="flex flex-col md:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="100">
           <div
             class="bg-[#0d235c] text-white px-4 py-1 rounded font-bold uppercase text-sm tracking-widest"
           >
@@ -258,7 +259,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col md:flex-row-reverse gap-6 items-start">
+        <div class="flex flex-col md:flex-row-reverse gap-6 items-start" data-aos="fade-up" data-aos-delay="300">
           <div
             class="bg-[#facc15] text-[#0d235c] px-4 py-1 rounded font-bold uppercase text-sm tracking-widest"
           >
@@ -298,11 +299,13 @@
           <div class="flex flex-col gap-10 text-right pointer-events-auto">
             <div
               class="bg-[#0d235c] text-white px-6 py-2 rounded-full font-bold shadow-lg"
+              data-aos="fade-left" data-aos-delay="100"
             >
               Compromiso
             </div>
             <div
               class="bg-[#0d235c] text-white px-6 py-2 rounded-full font-bold shadow-lg"
+              data-aos="fade-left" data-aos-delay="200"
             >
               Transparencia
             </div>
@@ -310,11 +313,13 @@
           <div class="flex flex-col gap-10 text-left pointer-events-auto">
             <div
               class="bg-[#facc15] text-[#0d235c] px-6 py-2 rounded-full font-bold shadow-lg"
+              data-aos="fade-left" data-aos-delay="300"
             >
               Puntualidad
             </div>
             <div
               class="bg-[#facc15] text-[#0d235c] px-6 py-2 rounded-full font-bold shadow-lg"
+              data-aos="fade-left" data-aos-delay="400"
             >
               Excelencia
             </div>
@@ -481,6 +486,15 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+        offset: 120,
+        easing: 'ease-in-out'
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
