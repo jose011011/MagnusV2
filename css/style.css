@@ -1,3 +1,9 @@
+/* Importar fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 /* Contenedor principal de la pantalla de carga */
 .loader-wrapper {
@@ -6,7 +12,6 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-/* Reemplaza 'background-color' por 'background' para usar este degradado */
     background: linear-gradient(135deg, #f5f7fa 0%, #d4e0eb 100%);
     display: flex;
     justify-content: center;
@@ -17,11 +22,10 @@
 
 /* Estilos y animación para la imagen de Magnus */
 .loader-logo-spin {
-    width: 230px; /* Tamaño del logo, ajústalo si lo ves muy grande o pequeño */
+    width: 230px;
     height: auto;
-    /* Llamamos a la animación: dura 1.5s, velocidad constante, se repite infinito */
     animation: giro3D 1.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
-    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2)); /* Sombra profesional */
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
 }
 
 /* Los Keyframes para el giro 3D tipo moneda */
@@ -29,9 +33,11 @@
     0% {
         transform: perspective(600px) rotateY(0deg) scale(1);
     }
+
     50% {
-        transform: perspective(600px) rotateY(180deg) scale(1.1); /* Crece un poquito a la mitad */
+        transform: perspective(600px) rotateY(180deg) scale(1.1);
     }
+
     100% {
         transform: perspective(600px) rotateY(360deg) scale(1);
     }
@@ -43,28 +49,7 @@
     pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Importar fuente Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
-
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-
-
-
-/* --- ESTILOS PARA EL CARRUSEL 3D DE 5 SERVICIOS --- */
+/* --- ESTILOS PARA EL CARRUSEL 3D DE SERVICIOS --- */
 .perspective-container {
     perspective: 1200px;
     transform-style: preserve-3d;
@@ -76,7 +61,7 @@ body {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transform-style: preserve-3d;
-    image-rendering: -webkit-optimize-contrast; /* Aumenta el contraste y nitidez */
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* Centro */
@@ -84,7 +69,7 @@ body {
     transform: translateX(0) scale(1) translateZ(0);
     z-index: 30;
     opacity: 1;
-    filter: blur(0); /* Asegura que no tenga desenfoque */
+    filter: blur(0);
 }
 
 /* Lados Cercanos */
@@ -93,32 +78,297 @@ body {
     z-index: 20;
     opacity: 1;
 }
+
 .next-card {
     transform: translateX(55%) scale(0.85) rotateY(-25deg) translateZ(-100px);
     z-index: 20;
     opacity: 1;
 }
 
-/* Extremos Lejanos (Lo que se asoma) */
+/* Extremos Lejanos */
 .prev-card-2 {
     transform: translateX(-100%) scale(0.7) rotateY(35deg) translateZ(-250px);
     z-index: 10;
     opacity: 0.8;
 }
+
 .next-card-2 {
-    transform: translateX(0) scale(0.7) translateZ(-200px); /* Justo detrás de la activa */
-    opacity: 0; /* La hacemos invisible hasta que se mueva a los lados */
+    transform: translateX(0) scale(0.7) translateZ(-200px);
+    opacity: 0;
     z-index: 10;
 }
 
-/* Ajustes para Móviles (Ocultamos los extremos para que no se vea amontonado en pantallas chiquitas) */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
-    .prev-card { transform: translateX(-40%) scale(0.8) rotateY(25deg) translateZ(-100px); }
-    .next-card { transform: translateX(40%) scale(0.8) rotateY(-25deg) translateZ(-100px); }
-    .prev-card-2 { transform: translateX(-60%) scale(0.6) rotateY(35deg) translateZ(-250px); opacity: 0; pointer-events: none; }
-    .next-card-2 { transform: translateX(60%) scale(0.6) rotateY(-35deg) translateZ(-250px); opacity: 0; pointer-events: none; }
+    .prev-card {
+        transform: translateX(-40%) scale(0.8) rotateY(25deg) translateZ(-100px);
+    }
+
+    /* Nota: no se tocan estilos de About aquí; se ajustan por separado al final del archivo. */
+
+
+    .next-card {
+        transform: translateX(40%) scale(0.8) rotateY(-25deg) translateZ(-100px);
+    }
+
+    .prev-card-2 {
+        transform: translateX(-60%) scale(0.6) rotateY(35deg) translateZ(-250px);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .next-card-2 {
+        transform: translateX(60%) scale(0.6) rotateY(-35deg) translateZ(-250px);
+        opacity: 0;
+        pointer-events: none;
+    }
 }
-/*
-section[style*="clip-path"] {
-    transition: all 0.3s ease-in-out;
-}*/
+
+/* ==========================================================
+   CORRECCIONES SOLO PARA LA PÁGINA NOSOTROS / ABOUT
+   No afecta las demás páginas si solo pones class="page-about" en el body
+========================================================== */
+
+.page-about {
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.page-about section,
+.page-about article,
+.page-about footer,
+.page-about header {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.page-about img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menú móvil más seguro */
+#mobile-menu.flex {
+    display: flex;
+}
+
+/* Ajuste base del logo (escritorio y móvil): evita que el contenedor crezca sin control */
+.page-about .about-logo-box {
+    display: flex;
+    justify-content: center;
+}
+
+.page-about .about-logo-box img {
+    max-height: 430px;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+/* Ajustes para About (logo) en móvil */
+@media (max-width: 768px) {
+    .page-about .about-logo-box {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Evita que el logo se haga demasiado grande por w-full + padding */
+    .page-about .about-logo-box img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        padding: 1.25rem;
+        object-fit: contain;
+    }
+
+
+    .page-about .about-deco-yellow,
+    .page-about .about-deco-blue {
+        width: 90px;
+        height: 90px;
+    }
+
+    .page-about .about-deco-yellow {
+        top: -14px;
+        left: -14px;
+    }
+
+    .page-about .about-deco-blue {
+        right: -14px;
+        bottom: -14px;
+    }
+
+    .page-about .about-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .page-about .about-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .page-about .about-text {
+        font-size: 0.92rem;
+        line-height: 1.8;
+    }
+}
+
+
+/* ================================
+   MISIÓN, VISIÓN Y VALORES - ABOUT
+================================ */
+
+.valor-card {
+    min-height: 82px;
+    border-radius: 999px;
+    padding: 14px 18px 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    box-shadow: 0 10px 24px rgba(6, 30, 100, 0.18);
+    position: relative;
+    overflow: visible;
+}
+
+.valor-card h3 {
+    font-size: 0.88rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.valor-card p {
+    font-size: 0.72rem;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.valor-azul {
+    background: #061E64;
+    color: white;
+}
+
+.valor-azul h3 {
+    color: white;
+}
+
+.valor-azul p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.valor-amarillo {
+    background: #facc15;
+    color: #061E64;
+}
+
+.valor-amarillo h3 {
+    color: #061E64;
+}
+
+.valor-amarillo p {
+    color: rgba(6, 30, 100, 0.8);
+}
+
+.valor-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 999px;
+    background: #f8fafc;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    color: #facc15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.45rem;
+    box-shadow: inset 0 0 0 2px rgba(6, 30, 100, 0.08);
+}
+
+.valor-amarillo .valor-icon {
+    color: #061E64;
+}
+
+.valores-circulo {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            from 15deg,
+            #061E64 0deg 55deg,
+            #d1d5db 55deg 75deg,
+            #facc15 75deg 135deg,
+            #d1d5db 135deg 155deg,
+            #061E64 155deg 220deg,
+            #d1d5db 220deg 245deg,
+            #facc15 245deg 310deg,
+            #d1d5db 310deg 360deg
+        );
+    opacity: 0.65;
+    animation: girarValores 18s linear infinite;
+}
+
+.valores-circulo::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    background: white;
+    border-radius: 50%;
+}
+
+@keyframes girarValores {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .valor-card,
+    .valor-right {
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .valores-circulo {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .valor-card {
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .valor-icon {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        font-size: 1.2rem;
+    }
+
+    .valor-card h3 {
+        font-size: 0.82rem;
+    }
+
+    .valor-card p {
+        font-size: 0.7rem;
+    }
+
+    .valores-circulo {
+        width: 250px;
+        height: 250px;
+    }
+}

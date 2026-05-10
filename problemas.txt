@@ -1,0 +1,32 @@
+PROBLEMAS POSIBLES EN about.html (y CSS) — layout y tamaño del logo
+
+1) Ajustes de CSS “About” probablemente no cubren escritorio
+- En css/style.css existen reglas específicas para .page-about.
+- Sin embargo, muchas correcciones adicionales solo están dentro de @media (max-width: 768px).
+- Si el problema del logo aparece en desktop o en anchos > 768px, esas correcciones no aplican y el contenedor queda con un tamaño “no esperado”.
+
+2) El logo usa w-full + p-8 sin límite de altura/aspect-ratio
+- about.html:
+  - <img ... class="w-full h-auto bg-white p-8 object-contain" />
+  - Contenedor: <div class="relative about-logo-box ... max-w-md ... lg:max-w-none">...
+- Riesgo: el padding (p-8) + w-full hace que el área del logo crezca o cambie de proporción según el ancho de pantalla.
+- Resultado típico: el logo se ve demasiado grande/pequeño o desbalanceado respecto al texto.
+
+3) Decoraciones con z-index negativo (-z-10) pueden recortarse o perderse
+- about.html usa:
+  - .about-deco-yellow y .about-deco-blue con posicionamiento absoluto y -z-10.
+- Con overflow oculto en algún padre (o contextos de apilamiento distintos entre navegadores), esas capas pueden quedar detrás de contenedores o desaparecer.
+
+4) Dependencia de js/main.js (loader/animaciones) que puede alterar visibilidad o layout
+- about.html incluye loader:
+  - <div id="magnus-pro-loader" class="loader-wrapper">...
+- Luego carga js/main.js.
+- Si main.js elimina el loader tarde o ajusta clases/estilos (opacity/visibility), puede causar “saltos” visuales: el logo/elementos parecen “no encajar” al final del render.
+
+5) Posible inconsistencia en inicialización de AOS
+- about.html carga AOS por CDN y también carga js/main.js.
+- Si main.js inicializa AOS de otra manera o hay duplicidad de init en otras páginas, puede haber animaciones que empujen/ajusten el layout al entrar en viewport.
+
+---
+NOTA
+Este archivo lista errores/problemas probables basados en el contenido actual de about.html y css/style.css. Para corregir exactamente el diseño, normalmente se verifica también js/main.js y se ajustan tamaños/contención del logo (altura máxima/aspect-ratio) y el comportamiento de las decoraciones con z-index.
